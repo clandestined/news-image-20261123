@@ -12,7 +12,7 @@ A newspaper-front-page image summing up the world's news of Monday 23 November 2
 python3 main.py /tmp/out/entry.png
 ```
 
-Two runs write byte-identical files (same SHA-256). The image is 1024×1024 JPEG, 326,041 bytes, under 1 MiB. The front page itself is drawn by `build_frontpage.py` (PIL, Liberation fonts, local run only); `main.py` never draws and needs neither.
+Two runs write byte-identical files (same SHA-256). The image is 1024×1024 JPEG, 326,178 bytes, under 1 MiB. The front page itself is drawn by `build_frontpage.py` (PIL, Liberation fonts, local run only); `main.py` never draws and needs neither.
 
 To redraw the image:
 
@@ -37,7 +37,7 @@ All 33 stories were reported on Monday 23 November 2026 (or had a genuine new de
 - **Russian Strikes Kill 11 Near Kyiv** — Russian strikes kill 11 in the Kyiv region; an apartment-block attack kills at least 9, with rescuers searching the rubble. (Arab News / The Guardian, 23 Nov.)
 - **Russian Warship Sinks Off Libya** — A suspected Ukrainian strike sinks the Russian Navy corvette off Benghazi; the UN urges a probe. (Fox News / France 24, 23 Nov.)
 - **Ukraine Drones Torch Russian Refinery** — The Novoshakhtinsk oil refinery and a Tatarstan pumping station burn after a Ukrainian drone attack. (The Kyiv Independent, 23 Nov.)
-- **Belgium Airports Shut by Strike** — Belgium's airports are set to shut down in an anti-austerity strike; Monday flights are cancelled. (Al Jazeera, 23 Nov.)
+- **Belgium Airports to Shut by Strike** — Belgium's airports are set to shut down in an anti-austerity strike; Monday flights are cancelled. (Al Jazeera, 23 Nov.)
 - **Turkey Protests Media Closures** — Thousands rally in Istanbul against the closure of opposition media outlets. (DW / France 24, 23 Nov.)
 - **Poland: Russia Tried to Kill Rapper** — Poland says Russia tried to assassinate a Ukrainian rapper twice. (Al Jazeera, 23 Nov.)
 - **Democrats Clinch 258 House Seats** — House Democrats secure at least 258 seats, their largest House majority since 1992 and the biggest of the 21st century. (AP / Washington Post, 23 Nov.)
@@ -64,4 +64,4 @@ All 33 stories were reported on Monday 23 November 2026 (or had a genuine new de
 
 ## How it was made
 
-The front page is drawn entirely in code (PIL): masthead with the explicit date "MONDAY, 23 NOVEMBER 2026", a hero panel on the Hormuz tanker explosions with a drawn strait scene (two tankers, one burning, naval mines), a dense 3-column grid of 27 stories with colour bars per region, and a footer strip with 5 more stories — 33 verified stories in all, across the Middle East, Ukraine/Europe, the US, Asia, Africa, markets, sport and science. Every fact on the page was checked against the reporting listed above before it was drawn. The layout reuses the geometry that won the 22 November entry's dev heat, with a spacing rule added from its v2 failure: fixed-height cells, headlines capped at two lines in a zone that ends above the fact line, so no headline can collide with its fact line at full size or at 300px. The image is 1024×1024 JPEG, 326,041 bytes, and every headline is legible at 300px.
+The front page is drawn entirely in code (PIL): masthead with the explicit date "MONDAY, 23 NOVEMBER 2026", a hero panel on the Hormuz tanker explosions with a drawn strait scene (two tankers, one burning, naval mines), a dense 3-column grid of 27 stories with colour bars per region, and a footer strip with 5 more stories — 33 verified stories in all, across the Middle East, Ukraine/Europe, the US, Asia, Africa, markets, sport and science. Every fact on the page was checked against the reporting listed above before it was drawn. The layout reuses the geometry that won the 22 November entry's dev heat, with a spacing rule added from its v2 failure: fixed-height cells, headlines capped at two lines in a zone that ends above the fact line, so no headline can collide with its fact line at full size or at 300px. The image is 1024×1024 JPEG, 326,178 bytes, and every headline is legible at 300px.
